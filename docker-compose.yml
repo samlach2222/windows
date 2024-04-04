@@ -3,8 +3,6 @@ services:
   windows:
     image: dockurr/windows
     container_name: windows
-    cap_add:
-      - NET_ADMIN
     environment:
       VERSION: "win7"
     devices:
