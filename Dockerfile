@@ -33,10 +33,10 @@ RUN chmod +x /run/*.sh && chmod +x /usr/sbin/wsdd
 EXPOSE 8006 3389
 VOLUME /storage
 
-ENV RAM_SIZE "4G"
+ENV RAM_SIZE "2G"
 ENV CPU_CORES "2"
 ENV DISK_SIZE "64G"
-ENV VERSION "win11"
+ENV VERSION "core11"
 
 ARG VERSION_ARG "0.0"
 RUN echo "$VERSION_ARG" > /run/version
