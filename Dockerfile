@@ -1,6 +1,7 @@
 FROM scratch
 COPY --from=qemux/qemu-docker:4.19 / /
 
+ARG CAP_ADD "NET_ADMIN"
 ARG DEBCONF_NOWARNINGS "yes"
 ARG DEBIAN_FRONTEND "noninteractive"
 ARG DEBCONF_NONINTERACTIVE_SEEN "true"
@@ -36,7 +37,7 @@ VOLUME /storage
 ENV RAM_SIZE "4G"
 ENV CPU_CORES "2"
 ENV DISK_SIZE "64G"
-ENV VERSION "win10"
+ENV VERSION "winxp"
 
 ARG VERSION_ARG "0.0"
 RUN echo "$VERSION_ARG" > /run/version
